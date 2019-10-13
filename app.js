@@ -42,7 +42,7 @@ app.use(session({
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true })
 .then(() => console.log('DataBase connection successful'))
-.catch((err) => console.error(err))
+.catch((err) => console.log(err))
 
 app.use('/index', indexRouter);
 app.use('/', usersRouter);
